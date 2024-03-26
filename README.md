@@ -58,7 +58,6 @@ Brief Overview
 ### Install
 
 - `npm i` - to install packages/dependencies
-- `npm run prepare` - to install husky and enable pre-commit hooks
 
 ### Run
 
