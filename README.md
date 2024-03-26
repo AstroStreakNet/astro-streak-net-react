@@ -26,7 +26,8 @@ Brief Overview
 
 1. [Project Description](#project-description)
 2. [Installation](#installation)
-3. [Copyright And Licensing](#copyright-and-licensing)
+3. [Running & Testing Scripts](#running-and-testing-scripts)
+4. [Copyright And Licensing](#copyright-and-licensing)
 
 ## Project Description
 
@@ -52,7 +53,7 @@ Brief Overview
 - REACT_APP_CHALLENGE_BASE_URL=https://3q82hpcgp1.execute-api.ap-southeast-2.amazonaws.com/prod
 - REACT_APP_CHALLENGE_API_KEY=(API key here)
 
-## Running & Testing (development environment) scripts
+## Running and Testing scripts
 
 ### Install
 
@@ -82,31 +83,6 @@ In cypress.config.ts find REPLACE_ME_WITH_BASE_URL and replace it with your loca
 ### Production build script
 
 - `npm run build` - build your project
-
-# Development strategy
-
-- Pull requests are as small as possible, while creating changes that are easily feature togglable
-- The code created is tested to at least at **80% coverage**
-- Comments are clear and useful, and mostly explain why instead of what
-
-## Definition of ready
-
-- A User Story is written in its typical narrative-like form **As** [kind of user] **I want** [some feature] **so that** [some benefit] and has Acceptance Criteria (AC) that are testable and fully understood by the team
-- A Bug details expected state vs actual state, offers a step-by-step guide on how to reproduce the issue, includes environment details and may have additional assets attached
-- Cards has been discussed and estimated by the team
-- Kick-off has been completed and there are no questions / actions awaiting the card.
-- Cards that touch on API integration have their API contract outlined within the card
-
-## Definition of Done
-
-- I have reviewed my own code
-- I have verified that my code created matches the **development strategy**
-- I have verified that all Acceptance Criteria (AC) are met
-- I have verified that my commits are properly labelled
-- I have updated any related documentation
-- I have added appropriate tests for my new changes to at least 80% coverage
-- I have verified that code passes the CI/CD review
-- I have updated any existing tests related to my changes
 
 ## Copyright And Licensing
 
