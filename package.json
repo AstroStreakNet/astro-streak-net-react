@@ -1,0 +1,82 @@
+{
+  "name": "launchpad-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "env-cmd -f env/.env.local react-scripts start",
+    "build:dev": "env-cmd -f env/.env.dev react-scripts build",
+    "build:prod": "env-cmd -f env/.env.prod react-scripts build",
+    "build": "npm-run-all -p build:*",
+    "test": "env-cmd -f env/.env.test craco test *",
+    "test:coverage": "env-cmd -f env/.env.test craco test * --coverage --watchAll=false",
+    "e2e": "npx cypress open",
+    "e2e:cli": "npx cypress run",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint": "eslint ./ --ignore-path .gitignore --ext .ts --ext tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --app 'cdk.out/' --require-approval never"
+  },
+  "dependencies": {
+    "env-cmd": "^10.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.1",
+    "react-router-dom": "^6.4.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@craco/craco": "^7.0.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.1",
+    "@types/jest": "^29.2.1",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "autoprefixer": "^10.4.7",
+    "aws-cdk": "^2.50.0",
+    "aws-cdk-lib": "^2.50.0",
+    "aws-s3": "^2.0.5",
+    "cdk": "^2.50.0",
+    "cypress": "^10.3.0",
+    "cypress-axe": "^1.0.0",
+    "eslint": "8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "husky": "^8.0.1",
+    "jest-html-reporters": "^3.0.11",
+    "mochawesome": "^7.1.3",
+    "msw": "^0.47.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "react-scripts": "5.0.1",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.7.4"
+  },
+  "overrides": {
+    "headers-polyfill": "3.0.10"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

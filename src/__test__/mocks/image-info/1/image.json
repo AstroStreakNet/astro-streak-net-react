@@ -1,0 +1,7 @@
+{
+  "entry_number": 1,
+  "pokemon_species": {
+    "name": "bulbasaur",
+    "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+  }
+}

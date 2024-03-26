@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-mono;
+}
+
+html {
+  background-color: #fbfbfb;
+}
+
+h1,
+h2,
+h3,
+p {
+  @apply text-slate-900;
+}
+
+.light-text {
+  @apply text-slate-500;
+}
+
+.light-border {
+  @apply border-2 border-slate-200;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  min-width: 350px;
+  overflow-y: overlay;
+  @apply min-w-[375px];
+}
+
+main {
+  @apply flex flex-col items-center w-full h-full;
+}
+
+h2 {
+  @apply p-5;
+}
+
+p {
+  @apply p-1;
+}
+
+.col {
+  @apply flex flex-col items-center justify-center;
+}
+
+.wrap {
+  @apply flex flex-wrap;
+}
+
+.centered {
+  @apply flex justify-center items-center h-3/4 w-3/4 my-10;
+}
+
+.red {
+  @apply bg-red-300;
+}
+
+.green {
+  @apply bg-green-300;
+}
