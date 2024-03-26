@@ -15,4 +15,3 @@ describe("Home", () => {
     screen.getByText(/Placeholder Read Me/);
   });
 });
-
