@@ -10,6 +10,7 @@ const isLocal = CONFIG === "LOCAL";
 describe("home page", () => {
   it("loads the home page", () => {
     mockListSuccessOnLocal();
+
     mockInfoSuccessOnLocal();
     visit();
     getBlurb().should("exist");
