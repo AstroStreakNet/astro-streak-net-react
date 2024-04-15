@@ -2,6 +2,7 @@
   {
     "name": "image1",
     "uploader": "Test_User",
+    "uploadDate": 1713187881486,
     "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
     "tags": [
       "HAS_SUN",
@@ -12,6 +13,7 @@
   {
     "name": "image2",
     "uploader": "Test_User",
+    "uploadDate": 1713187881486,
     "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
     "tags": [
       "HAS_SUN",
@@ -21,6 +23,7 @@
   {
     "name": "image3",
     "uploader": "Test_User",
+    "uploadDate": 1713187881486,
     "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
     "tags": []
   }

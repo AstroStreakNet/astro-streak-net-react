@@ -5,6 +5,7 @@ function imageResponseToImage(response: ImageResponse): Image {
   return {
     name: response.name,
     uploader: response.uploader,
+    uploadDate: new Date(response.uploadDate),
     url: response.url,
     tags: response.tags
       .map((tag) => {
@@ -14,7 +15,9 @@ function imageResponseToImage(response: ImageResponse): Image {
   };
 }
 
-export function imageResponseListToImageList(response: ImageResponseList): ImageList {
+export function imageResponseListToImageList(
+  response: ImageResponseList
+): ImageList {
   return response.map((image) => {
     return imageResponseToImage(image);
   });

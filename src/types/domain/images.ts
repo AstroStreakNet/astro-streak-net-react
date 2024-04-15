@@ -1,6 +1,7 @@
 export type Image = {
   name: string;
   uploader: string;
+  uploadDate: Date;
   url: string;
   tags: ImageTag[];
 };
@@ -21,6 +22,5 @@ export namespace ImageTag {
     } else {
       return undefined;
     }
-
   }
 }

@@ -1,8 +1,7 @@
-import {Image} from "../domain/images";
-
 export type ImageResponse = {
   name: string;
   uploader: string;
+  uploadDate: number;
   url: string;
   tags: string[];
 };
