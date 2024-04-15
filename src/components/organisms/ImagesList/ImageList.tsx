@@ -1,10 +1,10 @@
 import ErrorMessage from "src/components/molecules/ErrorMessage/ErrorMessage";
 import ImageTile from "src/components/molecules/ImageTile/ImageTile";
 import LoadingMessage from "src/components/atoms/LoadingMessage/LoadingMessage";
-import useFetchImageList from "src/hooks/useFetchImageList";
+import useFetchImageListPlaceholder from "src/hooks/useFetchImageListPlaceholder";
 
 const ImageList = () => {
-  const { isLoading, isError, data, error } = useFetchImageList();
+  const { isLoading, isError, data, error } = useFetchImageListPlaceholder();
 
   if (isLoading) {
     return <LoadingMessage />;

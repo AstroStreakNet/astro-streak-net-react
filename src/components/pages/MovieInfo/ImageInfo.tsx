@@ -3,7 +3,7 @@ import HomeLink from "src/components/atoms/HomeLink/HomeLink";
 import ImageDetails from "src/components/molecules/ImageDetails/ImageDetails";
 import LoadingMessage from "src/components/atoms/LoadingMessage/LoadingMessage";
 import { PokemonEntry } from "src/types/placeholder";
-import useFetchImageList from "src/hooks/useFetchImageList";
+import useFetchImageListPlaceholder from "src/hooks/useFetchImageListPlaceholder";
 import { useParams } from "react-router-dom";
 
 type ImageInfoParams = {
@@ -13,7 +13,7 @@ type ImageInfoParams = {
 const ImageInfo = () => {
   const { id } = useParams() as ImageInfoParams;
 
-  const { isLoading, isError, data } = useFetchImageList();
+  const { isLoading, isError, data } = useFetchImageListPlaceholder();
 
   if (isLoading) {
     return <LoadingMessage />;
