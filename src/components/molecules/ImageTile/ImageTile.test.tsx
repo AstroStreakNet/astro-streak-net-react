@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import images from "src/__test__/mocks/image-lists/images.json";
+import images from "src/__test__/mocks/image-lists/imagesPlaceholder.json";
 import ImageTile from "./ImageTile";
 import { MemoryRouter } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import { challengeApi } from "../../config";
-import images from "src/__test__/mocks/image-lists/images.json";
+import images from "src/__test__/mocks/image-lists/imagesPlaceholder.json";
 import { rest } from "msw";
 
 export const Any500Factory = () => {

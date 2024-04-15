@@ -9,7 +9,7 @@ import {
 } from "src/__test__/utils/suppress-unsuppress-errors";
 import ImageList from "./ImageList";
 import { imageList500Factory } from "src/__test__/mocks/handlers";
-import images from "src/__test__/mocks/image-lists/images.json";
+import images from "src/__test__/mocks/image-lists/imagesPlaceholder.json";
 import { MemoryRouter } from "react-router-dom";
 import { renderWithQueryClientProvider } from "src/__test__/utils/render-with-query-client-provider";
 import { server } from "src/__test__/mocks/server";

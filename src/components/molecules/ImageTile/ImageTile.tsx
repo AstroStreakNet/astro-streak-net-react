@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PokemonEntry } from "src/types";
+import { PokemonEntry } from "src/types/placeholder";
 
 const ImageTile = ({ image }: { image: PokemonEntry }) => {
   // const { id, name, imgURL } = image;

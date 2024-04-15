@@ -2,7 +2,7 @@ import ErrorMessage from "src/components/molecules/ErrorMessage/ErrorMessage";
 import HomeLink from "src/components/atoms/HomeLink/HomeLink";
 import ImageDetails from "src/components/molecules/ImageDetails/ImageDetails";
 import LoadingMessage from "src/components/atoms/LoadingMessage/LoadingMessage";
-import { PokemonEntry } from "src/types";
+import { PokemonEntry } from "src/types/placeholder";
 import useFetchImageList from "src/hooks/useFetchImageList";
 import { useParams } from "react-router-dom";
 

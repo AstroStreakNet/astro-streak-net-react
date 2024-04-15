@@ -1,4 +1,4 @@
-import * as images from "../../src/__test__/mocks/image-lists/images.json";
+import * as images from "../../src/__test__/mocks/image-lists/imagesPlaceholder.json";
 import { violationLogger } from "../axe/violationLogger";
 
 const BASE_URL = Cypress.env().baseUrl;

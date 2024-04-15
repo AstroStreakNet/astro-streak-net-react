@@ -1,11 +1,3 @@
-export type ImageResponse = {
-  id: string;
-  name: string;
-  imgURL: string;
-};
-
-export type ImageList = ImageResponse[];
-
 export type PokemonSpecies = {
   name: string;
   url: string;
@@ -37,7 +29,3 @@ export function AddImagesToPokedex(
     }),
   };
 }
-
-export type Header = {
-  "x-api-key": string;
-};

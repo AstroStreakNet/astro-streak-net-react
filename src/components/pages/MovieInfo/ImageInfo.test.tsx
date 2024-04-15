@@ -9,7 +9,7 @@ import {
   suppressErrors,
   unSuppressErrors,
 } from "src/__test__/utils/suppress-unsuppress-errors";
-import image from "src/__test__/mocks/image-info/1/image.json";
+import image from "src/__test__/mocks/image-info/1/imagePlaceholder.json";
 import ImageInfo from "./ImageInfo";
 import { imageList500Factory } from "src/__test__/mocks/handlers";
 import { renderWithQueryClientProvider } from "src/__test__/utils/render-with-query-client-provider";

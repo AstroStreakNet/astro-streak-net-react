@@ -1,4 +1,4 @@
-import { AddImagesToPokedex, PokedexResult } from "src/types";
+import { AddImagesToPokedex, PokedexResult } from "src/types/placeholder";
 import fetchImageList from "src/api/fetchImageList";
 import { useQuery } from "react-query";
 
