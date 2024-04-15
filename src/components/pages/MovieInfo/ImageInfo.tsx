@@ -1,9 +1,9 @@
 import ErrorMessage from "src/components/molecules/ErrorMessage/ErrorMessage";
 import HomeLink from "src/components/atoms/HomeLink/HomeLink";
+import { Image } from "../../../types/domain/images";
 import ImageDetails from "src/components/molecules/ImageDetails/ImageDetails";
 import LoadingMessage from "src/components/atoms/LoadingMessage/LoadingMessage";
-import { PokemonEntry } from "src/types/placeholder";
-import useFetchImageListPlaceholder from "src/hooks/useFetchImageListPlaceholder";
+import useFetchImageList from "../../../hooks/useFetchImageList";
 import { useParams } from "react-router-dom";
 
 type ImageInfoParams = {
@@ -13,7 +13,7 @@ type ImageInfoParams = {
 const ImageInfo = () => {
   const { id } = useParams() as ImageInfoParams;
 
-  const { isLoading, isError, data } = useFetchImageListPlaceholder();
+  const { isLoading, isError, data } = useFetchImageList();
 
   if (isLoading) {
     return <LoadingMessage />;
@@ -28,19 +28,13 @@ const ImageInfo = () => {
     return <ErrorMessage error={`Image data not found.`} />;
   }
 
-  const { pokemon_species } = data.pokemon_entries.find(
-    (pokemon) => `${pokemon.entry_number}` === id
-  ) as PokemonEntry;
+  const { name, url } = data.find((image) => `${image.name}` === id) as Image;
 
   return (
     <>
       <div className="wrap items-center justify-center p-5">
-        <img
-          className="p-5 m-5 light-border"
-          src={pokemon_species.url}
-          alt={`Image ${pokemon_species.name}`}
-        />
-        <ImageDetails title={pokemon_species.name} />
+        <img className="p-5 m-5 light-border" src={url} alt={`Image ${name}`} />
+        <ImageDetails title={name} />
       </div>
       <HomeLink />
     </>

@@ -9,7 +9,7 @@ import {
 } from "src/__test__/utils/suppress-unsuppress-errors";
 import ImageList from "./ImageList";
 import { imageList500Factory } from "src/__test__/mocks/handlers";
-import images from "src/__test__/mocks/image-lists/imagesPlaceholder.json";
+import images from "src/__test__/mocks/image-lists/images.json";
 import { MemoryRouter } from "react-router-dom";
 import { renderWithQueryClientProvider } from "src/__test__/utils/render-with-query-client-provider";
 import { server } from "src/__test__/mocks/server";
@@ -27,9 +27,9 @@ describe("ImageList", () => {
     await waitFor(() => screen.getByText("Loading..."));
     await waitForElementToBeRemoved(() => screen.getByText("Loading..."));
 
-    images.pokemon_entries.forEach(({ pokemon_species }) => {
-      screen.getByText(pokemon_species.name);
-      screen.getByAltText(`Image ${pokemon_species.name}`);
+    images.forEach((image) => {
+      screen.getByText(image.name);
+      screen.getByAltText(`Image ${image.name}`);
     });
   });
 });
@@ -46,9 +46,9 @@ describe("ImageList Errors", () => {
     await waitFor(() => screen.getByText("Loading..."));
     await waitForElementToBeRemoved(() => screen.getByText("Loading..."));
 
-    images.pokemon_entries.forEach(({ pokemon_species }) => {
-      screen.getByText(pokemon_species.name);
-      screen.getByAltText(`Image ${pokemon_species.name}`);
+    images.forEach((image) => {
+      screen.getByText(image.name);
+      screen.getByAltText(`Image ${image.name}`);
     });
   });
 

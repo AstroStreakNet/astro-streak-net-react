@@ -1,10 +1,10 @@
 import ErrorMessage from "src/components/molecules/ErrorMessage/ErrorMessage";
 import ImageTile from "src/components/molecules/ImageTile/ImageTile";
 import LoadingMessage from "src/components/atoms/LoadingMessage/LoadingMessage";
-import useFetchImageListPlaceholder from "src/hooks/useFetchImageListPlaceholder";
+import useFetchImageList from "../../../hooks/useFetchImageList";
 
 const ImageList = () => {
-  const { isLoading, isError, data, error } = useFetchImageListPlaceholder();
+  const { isLoading, isError, data, error } = useFetchImageList();
 
   if (isLoading) {
     return <LoadingMessage />;
@@ -23,8 +23,8 @@ const ImageList = () => {
 
   return (
     <div className="wrap justify-evenly w-11/12 ">
-      {data.pokemon_entries.map((image) => {
-        return <ImageTile key={image.entry_number} image={image} />;
+      {data.map((image) => {
+        return <ImageTile key={image.name} image={image} />;
       })}
     </div>
   );
