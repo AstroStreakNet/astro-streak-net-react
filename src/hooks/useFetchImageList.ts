@@ -1,10 +1,10 @@
 import { AddImagesToPokedex, PokedexResult } from "src/types/placeholder";
-import fetchImageList from "src/api/fetchImageList";
+import fetchImageListPlaceholder from "src/api/fetchImageListPlaceholder";
 import { useQuery } from "react-query";
 
 const useFetchImageList = () => {
   return useQuery<PokedexResult, Error>("image-list", async () => {
-    const result = await fetchImageList();
+    const result = await fetchImageListPlaceholder();
     return AddImagesToPokedex(result);
   });
 };
