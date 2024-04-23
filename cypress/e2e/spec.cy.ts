@@ -1,8 +1,8 @@
-import * as images from "../../src/__test__/mocks/image-lists/imagesPlaceholder.json";
+import * as images from "../../src/__test__/mocks/image-lists/images.json";
 import { violationLogger } from "../axe/violationLogger";
 
 const BASE_URL = Cypress.env().baseUrl;
-const NODE_API_URL = `${Cypress.env().apiEndPointUrl}/v1/image`;
+const NODE_API_URL = `${Cypress.env().apiEndPointUrl}/images/`;
 
 const CONFIG = Cypress.env().config;
 const isLocal = CONFIG === "LOCAL";
