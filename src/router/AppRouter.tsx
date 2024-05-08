@@ -3,7 +3,7 @@ import Gallery from "../components/pages/Gallery/Gallery";
 import Header from "src/components/atoms/Header/Header";
 import Health from "src/components/molecules/Health/Health";
 import Home from "src/components/pages/Home/Home";
-import ImageInfo from "src/components/pages/MovieInfo/ImageInfo";
+import ImageInfo from "src/components/pages/ImageInfo/ImageInfo";
 import NotFound from "src/components/pages/NotFound/NotFound";
 
 const AppRouter = () => {
