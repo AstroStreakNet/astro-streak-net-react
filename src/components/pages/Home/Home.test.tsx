@@ -3,15 +3,27 @@ import { MemoryRouter } from "react-router-dom";
 import { renderWithQueryClientProvider } from "src/__test__/utils/render-with-query-client-provider";
 import { screen } from "@testing-library/react";
 
+// HTML content
+const htmlContent = `
+  <div>
+    <h1>Welcome to Home Page</h1>
+    <p>This is a paragraph</p>
+    <!-- Add any other HTML elements as needed -->
+  </div>
+`;
+
 const wrapWithMemoryRouter = (
   <MemoryRouter>
     <Home />
   </MemoryRouter>
 );
 
+// Describe the test case
 describe("Home", () => {
-  it("should display the movies", async () => {
+  it("should display the HTML content", async () => {
     renderWithQueryClientProvider(wrapWithMemoryRouter);
-    screen.getByText(/Placeholder Read Me/);
+    screen.getByText(/Welcome to Home Page/);
+    screen.getByText(/This is a paragraph/);
+    // Add assertions for other elements if needed
   });
-});
+})

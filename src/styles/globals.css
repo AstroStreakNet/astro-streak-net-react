@@ -7,14 +7,14 @@
 }
 
 html {
-  background-color: #fbfbfb;
+  background-color: #1C2533;
 }
 
 h1,
 h2,
 h3,
 p {
-  @apply text-slate-900;
+  color: #E0E8F4;
 }
 
 .light-text {
@@ -64,4 +64,104 @@ p {
 
 .green {
   @apply bg-green-300;
+}
+
+
+/* Navbar.css */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.navbar img {
+  height: 30px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.account-bubble {
+  background-color: #E0E8F4;
+  color: #1C2533;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px; /* Set line-height equal to height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HomeBanner.css */
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:50%;
+  background-image: url("src/components/atoms/HomeElements/spacePic.png");
+  background-size: contain; /* Change this to maintain aspect ratio */
+
+  background-position: center;
+
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 70px;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
