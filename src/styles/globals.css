@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply font-mono;
-}
+
 
 html {
   background-color: #1C2533;
@@ -19,10 +17,6 @@ p {
 
 .light-text {
   @apply text-slate-500;
-}
-
-.light-border {
-  @apply border-2 border-slate-200;
 }
 
 html,
@@ -58,19 +52,11 @@ p {
   @apply flex justify-center items-center h-3/4 w-3/4 my-10;
 }
 
-.red {
-  @apply bg-red-300;
-}
 
-.green {
-  @apply bg-green-300;
-}
-
-
-/* Navbar.css */
+/* --------- Navbar --------- */
 
 .navbar {
-  background-color: #333;
+  background-color: #1C2533;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -116,7 +102,7 @@ p {
   align-items: center;
 }
 
-/* HomeBanner.css */
+/* --------- HomeBanner.css --------- */
 .homepage {
   position: relative;
   width: 100%;
@@ -132,11 +118,10 @@ p {
   height:50%;
   background-image: url("src/components/atoms/HomeElements/spacePic.png");
   background-size: contain; /* Change this to maintain aspect ratio */
-
   background-position: center;
 
 }
-
+/*Box for background img and header*/
 .content {
   position: absolute;
   top: 50%;
@@ -147,21 +132,282 @@ p {
 }
 
 .content h1 {
-  font-size: 70px;
+  font-size: min(6vw, 70px);
+  font-weight: lighter;
 }
 
 .learn-more-btn {
   display: inline-block;
-  padding: 15px 30px;
+  font-size: min(2vw, 15px); /* 2% of the viewport width */
+  padding: min(2vw, 15px) min(4vw, 30px);
   background-color: transparent;
   color: #fff;
   border: 2px solid #fff;
   text-decoration: none;
   border-radius: 25px;
   transition: background-color 0.3s, color 0.3s;
+  margin-top: 4vh; /*push button lower*/
 }
 
 .learn-more-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
+}
+
+/*Line across page*/
+.Home-Line {
+  position: absolute;
+  top: calc(53vh + 20px); /* Adjust the margin as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%; /* Adjust the width as needed */
+  height: 1px;
+  background-color: white;
+}
+
+/*--------- Gallery Page, ImageTile ---------*/
+
+/* Container for each image */
+.image-container {
+  background-color: #2d3748;
+  padding:20px;
+  margin: 30px; /* Reduced margin */
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Author details */
+.author-details {
+  display: flex;
+  align-items: center; /* Align items horizontally */
+}
+
+/* Account bubble */
+.account-bubble {
+  background-color: #E0E8F4;
+  color: #1C2533;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Author name */
+.author-name {
+  color: #E0E8F4;
+  font-style: italic;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Image description */
+.image-description {
+  color: #E0E8F4;
+}
+
+/*--------- Gallery Title, Search bar ---------*/
+.gallery-page {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+.gallery-header {
+  max-width: 550px; /* Adjust maximum width as needed */
+  padding: 20px; /* Add padding for spacing */
+  margin-bottom: 30px;
+  margin: auto;
+}
+
+.gallery-title {
+  color: #E0E8F4;
+  font-size: min(7vw, 50px); /* Adjust the font size */
+  margin-bottom: 30px; /* Add margin for spacing */
+   display: block;
+}
+
+.search-container {
+  position: relative;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  background-color: #E0E8F4;
+  width: 100%; /* Adjust width as needed */
+  padding: 10px;
+  border: 1px solid #E0E8F4;
+  border-radius: 25px; /* Make the edges round */
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  width: 25px; /* Adjust the width of the icon */
+  height: 25px; /* Adjust the height of the icon */
+}
+
+/* Adjust image to appear as an extension of the search bar */
+.search-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px; /* Width of the search icon */
+  background-color: #E0E8F4; /* Same as search bar background */
+  z-index: 1; /* Ensure it's above the search icon */
+}
+
+/* Line below the search bar */
+.Gallery-Line {
+  top: 90px; /* Adjust the height of the search bar as needed */
+  width: 95%; /* Adjust the width as needed */
+  height: 1px;
+  background-color: #E0E8F4;
+  display: inline-block;
+}
+
+/*--------- Upload ---------*/
+
+.Upload-line {
+  width: 100%;
+  height: 1px;
+  background-color: #E0E8F4;
+}
+
+.upload-title {
+   color: #E0E8F4;
+   font-size: min(7vw, 40px); /* Adjust the font size */
+   margin-bottom: 30px; /* Add margin for spacing */
+}
+
+/* Upload container */
+.upload-container {
+  display: flex;
+  width: 100%; /* Span the whole page */
+  gap: 100px; /* Increase the gap between the sections */
+}
+
+/* ------ Left side (Upload Drag and Drop Section) ------ */
+.upload-drag-drop {
+  flex: 1; /* Take up 50% of the available space */
+  background-color: rgba(184, 209, 245, 0.6); /* B8D1F5 with 60% transparency */
+  border-radius: 15px;
+  padding: 20px; /* Add padding for spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Black dashed border */
+.drag-drop-area {
+  border: 2px dashed #000;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text below the select files button */
+.drag-drop-text {
+  margin-top: 10px; /* Add space between elements */
+}
+
+/* Drag file image */
+.drag-file-image {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+}
+
+/* ------ Right side (Upload Form Section) ------ */
+
+.upload-form {
+  flex: 1; /* Take up 50% of the available space */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.upload-container {
+  display: flex;
+}
+
+.upload-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.upload-box input[type="file"] {
+  display: none;
+
+}
+
+/* Style for description and text box pairs */
+.input-section {
+  margin-bottom: 20px; /* Add space between each input section */
+}
+
+.input-section label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add space between label and input */
+  color: white;
+}
+
+/* Text input fields */
+.input-section input[type="text"] {
+  display: block;
+  margin-bottom: 10px;
+  width: calc(100% - 20px); /* Make the text boxes longer */
+  padding: 10px;
+  background-color: rgba(184, 209, 245, 1); /* B8D1F5 with 100% transparency */
+  border: none;
+  border-radius: 15px;
+  color: #000; /* Set text color to black */
+}
+
+.input-section input[type="text"]:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on focus */
+}
+
+/* Button styles */
+.input-section button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* Make the edges round */
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+.select-files-button {
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px; /* Add space between elements */
 }
