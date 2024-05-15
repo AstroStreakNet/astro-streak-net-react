@@ -19,7 +19,7 @@ export default defineConfig({
   },
   env: {
     baseUrl: "http://localhost:3000",
-    apiEndPointUrl: "https://pokeapi.co/api/v2",
+    apiEndPointUrl: "https://astrostreakstest.co/api",
     config: "LOCAL",
   },
   videosFolder: `${REPORTS_PATH}/videos`,

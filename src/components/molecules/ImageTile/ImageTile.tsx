@@ -1,16 +1,14 @@
+import { Image } from "../../../types/domain/images";
 import { Link } from "react-router-dom";
-import { PokemonEntry } from "src/types";
 
-const ImageTile = ({ image }: { image: PokemonEntry }) => {
-  // const { id, name, imgURL } = image;
-  const entry_number = image.entry_number;
-  const { name, url } = image.pokemon_species;
+const ImageTile = ({ image }: { image: Image }) => {
+  const { name, url } = image;
 
   return (
     <Link
-      to={`/image/${entry_number}`}
+      to={`/image/${name}`}
       className="flex items-center justify-center p-3 w-96 m-3 light-border"
-      data-testid={`image${entry_number}`}
+      data-testid={`image${name}`}
     >
       <div className="col">
         <img src={url} alt={`Image ${name}`} />

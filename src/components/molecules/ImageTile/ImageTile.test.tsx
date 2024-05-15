@@ -1,28 +1,24 @@
 import { render, screen, waitFor } from "@testing-library/react";
+import { imageResponseListToImageList } from "../../../types/mapper/images";
 import images from "src/__test__/mocks/image-lists/images.json";
 import ImageTile from "./ImageTile";
 import { MemoryRouter } from "react-router-dom";
 
 describe("ImageTile", () => {
   it("should display the image tile", async () => {
-    const imageResponse = images.pokemon_entries[0];
+    const imageResponseList = images;
+    const image = imageResponseListToImageList(imageResponseList)[0];
     render(
       <MemoryRouter>
-        <ImageTile image={imageResponse} />
+        <ImageTile image={image} />
       </MemoryRouter>
     );
 
-    await waitFor(() => screen.getByText(imageResponse.pokemon_species.name));
+    await waitFor(() => screen.getByText(image.name));
     const img = await waitFor(() => screen.getByRole("img"));
-    expect(img).toHaveAttribute("src", imageResponse.pokemon_species.url);
-    expect(img).toHaveAttribute(
-      "alt",
-      `Image ${imageResponse.pokemon_species.name}`
-    );
+    expect(img).toHaveAttribute("src", image.url);
+    expect(img).toHaveAttribute("alt", `Image ${image.name}`);
     const link = await waitFor(() => screen.getByRole("link"));
-    expect(link).toHaveAttribute(
-      "href",
-      `/image/${imageResponse.entry_number}`
-    );
+    expect(link).toHaveAttribute("href", `/image/${image.name}`);
   });
 });

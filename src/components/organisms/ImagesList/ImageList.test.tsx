@@ -27,9 +27,9 @@ describe("ImageList", () => {
     await waitFor(() => screen.getByText("Loading..."));
     await waitForElementToBeRemoved(() => screen.getByText("Loading..."));
 
-    images.pokemon_entries.forEach(({ pokemon_species }) => {
-      screen.getByText(pokemon_species.name);
-      screen.getByAltText(`Image ${pokemon_species.name}`);
+    images.forEach((image) => {
+      screen.getByText(image.name);
+      screen.getByAltText(`Image ${image.name}`);
     });
   });
 });
@@ -46,9 +46,9 @@ describe("ImageList Errors", () => {
     await waitFor(() => screen.getByText("Loading..."));
     await waitForElementToBeRemoved(() => screen.getByText("Loading..."));
 
-    images.pokemon_entries.forEach(({ pokemon_species }) => {
-      screen.getByText(pokemon_species.name);
-      screen.getByAltText(`Image ${pokemon_species.name}`);
+    images.forEach((image) => {
+      screen.getByText(image.name);
+      screen.getByAltText(`Image ${image.name}`);
     });
   });
 
