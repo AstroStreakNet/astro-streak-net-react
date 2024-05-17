@@ -1,5 +1,6 @@
 import Description from "src/components/atoms/Description/Description";
 import HomeBackgroundPic from "src/components/atoms/HomeElements/HomeBackgroundPic";
+import HomeImageList from "src/components/organisms/ImagesList/HomeImageList";
 import NavBar from "src/components/atoms/NavBar/NavBar";
 
 
@@ -8,8 +9,7 @@ const Home = () => {
     <>
       <NavBar/>
       <HomeBackgroundPic/>
-      <Description />
-
+      <HomeImageList/>
     </>
   );
 };

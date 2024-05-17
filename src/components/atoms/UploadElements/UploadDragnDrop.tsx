@@ -1,14 +1,16 @@
 const UploadDragDrop: React.FC = () => {
   return (
     <div className="upload-section">
-      <div className="upload-box">
-        {/* Box for uploading images */}
-        <input type="file" id="fileInput" multiple />
-        <label htmlFor="fileInput">Click to Upload or Drag & Drop Here</label>
-      </div>
       <div className="drag-drop-area">
-        {/* Drag and drop area */}
-        <p>Drag & Drop Image Here</p>
+        {/* Logo image */}
+        <img src="uploadDocs.png" alt="Upload Logo" className="drag-file-image" />
+
+        {/* Choose files button */}
+        <input type="file" id="fileInput" multiple style={{ display: 'none' }} />
+        <label htmlFor="fileInput" className="select-files-button">Choose Files</label>
+
+        {/* Text below the button */}
+        <p className="drag-drop-text">or drag here</p>
       </div>
     </div>
   );
