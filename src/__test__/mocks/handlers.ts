@@ -9,7 +9,7 @@ export const Any500Factory = () => {
 };
 
 export const imageListSuccess = rest.get(
-  `${challengeApi.baseUrl}/pokedex/1`,
+  `${challengeApi.baseUrl}/images/`,
   (req, res, ctx) => {
     return res(ctx.json(images));
   }
@@ -25,7 +25,7 @@ type Options = {
  *  once: used to run the handler only once for simulating single failures.
  */
 export const imageList500Factory = ({ once }: Options = {}) => {
-  return rest.get(`${challengeApi.baseUrl}/pokedex/1`, (req, res, ctx) => {
+  return rest.get(`${challengeApi.baseUrl}/images/`, (req, res, ctx) => {
     if (once) {
       return res.once(ctx.status(500), ctx.json({ message: "Fail" }));
     } else {

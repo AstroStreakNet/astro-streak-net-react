@@ -2,7 +2,7 @@ import {
   suppressErrors,
   unSuppressErrors,
 } from "src/__test__/utils/suppress-unsuppress-errors";
-import fetchImageList from "src/api/fetchImageList";
+import fetchImageList from "./fetchImageList";
 import { imageList500Factory } from "src/__test__/mocks/handlers";
 import images from "src/__test__/mocks/image-lists/images.json";
 import { server } from "src/__test__/mocks/server";
