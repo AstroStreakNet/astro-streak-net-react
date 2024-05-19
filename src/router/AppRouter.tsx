@@ -4,6 +4,7 @@ import Header from "src/components/atoms/Header/Header";
 import Health from "src/components/molecules/Health/Health";
 import Home from "src/components/pages/Home/Home";
 import ImageInfo from "src/components/pages/MovieInfo/ImageInfo";
+import NavBar from "../components/atoms/NavBar/NavBar";
 import NotFound from "src/components/pages/NotFound/NotFound";
 import Upload from "../components/pages/Upload/Upload";
 
@@ -11,6 +12,7 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Header />
+      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

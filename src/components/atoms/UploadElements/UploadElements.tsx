@@ -11,7 +11,6 @@ const UploadElements: React.FC = () => {
 
       {/* Upload Container */}
       <div className="upload-container">
-
         {/* Upload Drag and Drop Section */}
         <div className="upload-drag-drop">
           <UploadDragnDrop />
@@ -20,7 +19,6 @@ const UploadElements: React.FC = () => {
         <div className="upload-form">
           <UploadForm />
         </div>
-
       </div>
     </div>
   );

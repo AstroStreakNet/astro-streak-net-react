@@ -2,7 +2,6 @@ import ErrorMessage from "src/components/molecules/ErrorMessage/ErrorMessage";
 import HomeLink from "src/components/atoms/HomeLink/HomeLink";
 import ImageDetails from "src/components/molecules/ImageDetails/ImageDetails";
 import LoadingMessage from "src/components/atoms/LoadingMessage/LoadingMessage";
-import NavBar from "src/components/atoms/NavBar/NavBar";
 import { PokemonEntry } from "src/types";
 import useFetchImageList from "src/hooks/useFetchImageList";
 import { useParams } from "react-router-dom";
@@ -12,7 +11,6 @@ type ImageInfoParams = {
 };
 
 const ImageInfo = () => {
-    <NavBar />
   const { id } = useParams() as ImageInfoParams;
 
   const { isLoading, isError, data } = useFetchImageList();

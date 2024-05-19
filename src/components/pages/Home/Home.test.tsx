@@ -26,4 +26,4 @@ describe("Home", () => {
     screen.getByText(/This is a paragraph/);
     // Add assertions for other elements if needed
   });
-})
+});

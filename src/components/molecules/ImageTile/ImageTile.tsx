@@ -1,16 +1,12 @@
-import { Link } from 'react-router-dom';
-import { PokemonEntry } from 'src/types';
+import { Link } from "react-router-dom";
+import { PokemonEntry } from "src/types";
 
 const ImageTile = ({ image }: { image: PokemonEntry }) => {
   const entry_number = image.entry_number;
   const { name, url } = image.pokemon_species;
 
   return (
-    <Link
-      to={`/image/${entry_number}`}
-
-      data-testid={`image${entry_number}`}
-    >
+    <Link to={`/image/${entry_number}`} data-testid={`image${entry_number}`}>
       <div className="col">
         {/* Image container */}
         <div className="image-container">
@@ -32,4 +28,3 @@ const ImageTile = ({ image }: { image: PokemonEntry }) => {
 };
 
 export default ImageTile;
-
