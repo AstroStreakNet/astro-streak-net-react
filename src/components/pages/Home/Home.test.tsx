@@ -22,8 +22,10 @@ const wrapWithMemoryRouter = (
 describe("Home", () => {
   it("should display the HTML content", async () => {
     renderWithQueryClientProvider(wrapWithMemoryRouter);
-    screen.getByText(/Welcome to Home Page/);
-    screen.getByText(/This is a paragraph/);
+    screen.getByText(/Send us your/);
+    screen.getByText(/Satellite Streak/);
+    screen.getByText(/Learn more/);
+    screen.getByText(/View Gallery/);
     // Add assertions for other elements if needed
   });
 });

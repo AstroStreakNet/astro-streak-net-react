@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Gallery from "../components/pages/Gallery/Gallery";
-import Header from "src/components/atoms/Header/Header";
 import Health from "src/components/molecules/Health/Health";
 import Home from "src/components/pages/Home/Home";
 import ImageInfo from "src/components/pages/ImageInfo/ImageInfo";
@@ -11,7 +10,6 @@ import Upload from "../components/pages/Upload/Upload";
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <Header />
       <NavBar />
       <main>
         <Routes>

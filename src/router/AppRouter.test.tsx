@@ -6,7 +6,9 @@ describe("AppRouter", () => {
   it("renders all components", async () => {
     renderWithQueryClientProvider(<AppRouter />);
 
-    screen.getByText(/^SpaceTitle$/);
-    screen.getByText(/Placeholder Read Me/);
+    screen.getByText(/Send us your/);
+    screen.getByText(/Satellite Streak/);
+    screen.getByText(/Learn more/);
+    screen.getByText(/View Gallery/);
   });
 });
