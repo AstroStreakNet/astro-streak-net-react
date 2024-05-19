@@ -106,7 +106,7 @@ p {
 .homepage {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
 }
 
 .background-img {
@@ -114,7 +114,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height:50%;
+  height:50vh;
   background-image: url("src/components/atoms/HomeElements/spacePic.png");
   background-size: cover; /* Change this to maintain aspect ratio */
   background-position: center;
