@@ -5,14 +5,22 @@ const ImageTile = ({ image }: { image: Image }) => {
   const { name, url } = image;
 
   return (
-    <Link
-      to={`/image/${name}`}
-      className="flex items-center justify-center p-3 w-96 m-3 light-border"
-      data-testid={`image${name}`}
-    >
+    <Link to={`/image/${image.name}`} data-testid={`image${image.name}`}>
       <div className="col">
-        <img src={url} alt={`Image ${name}`} />
-        <h2 className="text-l text-center	p-2">{name}</h2>
+        {/* Image container */}
+        <div className="image-container">
+          {/* Author details */}
+          <div className="author-details">
+            {/* Account bubble */}
+            <div className="account-bubble">A</div>
+            {/* Author name */}
+            <h2 className="author-name">{name}</h2>
+          </div>
+          {/* Image */}
+          <img src={url} alt={`Image ${name}`} className="image" />
+          {/* Image description */}
+          <p className="image-description">Image description goes here</p>
+        </div>
       </div>
     </Link>
   );

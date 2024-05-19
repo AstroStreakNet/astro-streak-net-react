@@ -1,9 +1,11 @@
-import Description from "src/components/atoms/Description/Description";
+import HomeBackgroundPic from "src/components/atoms/HomeElements/HomeBackgroundPic";
+import HomeImageList from "src/components/organisms/ImagesList/HomeImageList";
 
 const Home = () => {
   return (
     <>
-      <Description />
+      <HomeBackgroundPic />
+      <HomeImageList />
     </>
   );
 };

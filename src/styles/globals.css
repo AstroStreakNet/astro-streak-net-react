@@ -2,27 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply font-mono;
-}
+
 
 html {
-  background-color: #fbfbfb;
+  background-color: #1C2533;
 }
 
 h1,
 h2,
 h3,
 p {
-  @apply text-slate-900;
+  color: #E0E8F4;
 }
 
 .light-text {
   @apply text-slate-500;
-}
-
-.light-border {
-  @apply border-2 border-slate-200;
 }
 
 html,
@@ -58,10 +52,419 @@ p {
   @apply flex justify-center items-center h-3/4 w-3/4 my-10;
 }
 
-.red {
-  @apply bg-red-300;
+
+/* --------- Navbar --------- */
+
+.navbar {
+  background-color: #1C2533;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
 }
 
-.green {
-  @apply bg-green-300;
+.navbar img {
+  height: 30px;
 }
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.account-bubble {
+  background-color: #E0E8F4;
+  color: #1C2533;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px; /* Set line-height equal to height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------- HomeBanner.css --------- */
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:50vh;
+  background-image: url("src/components/atoms/HomeElements/spacePic.png");
+  background-size: cover; /* Change this to maintain aspect ratio */
+  background-position: center;
+
+}
+/*Box for background img and header*/
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: min(6vw, 70px);
+  font-weight: lighter;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  font-size: min(2vw, 15px); /* 2% of the viewport width */
+  padding: min(2vw, 15px) min(4vw, 30px);
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 4vh; /*push button lower*/
+}
+
+.learn-more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/*Line across page*/
+.Home-Line {
+  position: absolute;
+  top: calc(53vh + 20px); /* Adjust the margin as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%; /* Adjust the width as needed */
+  height: 1px;
+  background-color: white;
+}
+
+.gallery-link {
+  position: absolute;
+  top: calc(53vh + 40px); /* Adjust the margin as needed */
+  transform: translateX(50%);
+  color: #E0E8F4;
+  font-size: min(7vw, 35px);
+  text-decoration: none; /* Remove underline */
+}
+
+.gallery-link:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/*--------- Gallery Page, ImageTile ---------*/
+
+/* Container for each image */
+.image-container {
+  background-color: #2d3748;
+  padding:20px;
+  margin: 30px; /* Reduced margin */
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Author details */
+.author-details {
+  display: flex;
+  align-items: center; /* Align items horizontally */
+}
+
+/* Account bubble */
+.account-bubble {
+  background-color: #E0E8F4;
+  color: #1C2533;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Author name */
+.author-name {
+  color: #E0E8F4;
+  font-style: italic;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Image description */
+.image-description {
+  color: #E0E8F4;
+}
+
+/*--------- Gallery Title, Search bar ---------*/
+.gallery-page {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+.gallery-header {
+  max-width: 550px; /* Adjust maximum width as needed */
+  padding: 20px; /* Add padding for spacing */
+  margin-bottom: 30px;
+  margin: auto;
+}
+
+.gallery-title {
+  color: #E0E8F4;
+  font-size: min(7vw, 50px); /* Adjust the font size */
+  margin-bottom: 30px; /* Add margin for spacing */
+   display: block;
+}
+
+.search-container {
+  position: relative;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  background-color: #E0E8F4;
+  width: 100%; /* Adjust width as needed */
+  padding: 10px;
+  border: 1px solid #E0E8F4;
+  border-radius: 25px; /* Make the edges round */
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  width: 25px; /* Adjust the width of the icon */
+  height: 25px; /* Adjust the height of the icon */
+}
+
+/* Adjust image to appear as an extension of the search bar */
+.search-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px; /* Width of the search icon */
+  background-color: #E0E8F4; /* Same as search bar background */
+  z-index: 1; /* Ensure it's above the search icon */
+}
+
+/* Line below the search bar */
+.Gallery-Line {
+  top: 90px; /* Adjust the height of the search bar as needed */
+  width: 95%; /* Adjust the width as needed */
+  height: 1px;
+  background-color: #E0E8F4;
+  display: inline-block;
+}
+
+/*--------- Upload ---------*/
+
+/* Stretch the Upload page through the entire page */
+.Upload-page {
+  width: 100%;
+  padding: 0 20px; /* Add padding to the sides if needed */
+}
+
+.Upload-line {
+  width: 100%;
+  height: 1px;
+  background-color: #E0E8F4;
+  display: inline-block;
+}
+
+.upload-title {
+  color: #E0E8F4;
+  font-size: min(7vw, 40px); /* Adjust the font size */
+  margin-bottom: 30px; /* Add margin for spacing */
+}
+
+/* Upload container */
+.upload-container {
+  display: flex;
+  width: 100%; /* Span the whole page */
+  max-width: 1600px;
+  min-width:1000px;
+  margin: 0 auto;
+  gap: 40px; /* Adjust the gap between the sections */
+  justify-content: center; /* Center the content */
+}
+
+/* ------ Left side (Upload Drag and Drop Section) ------ */
+.upload-drag-drop {
+  flex: 0 0 45%; /* Take up 45% of the available space */
+  background-color: rgba(184, 209, 245, 0.6); /* B8D1F5 with 60% transparency */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(0, 0, 0, 0.3); /* Lighter dashed border around the whole box */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.drag-drop-area {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text below the select files button */
+.drag-drop-text {
+  margin-top: 10px; /* Add space between elements */
+}
+
+/* Drag file image */
+.drag-file-image {
+  width: 220px;
+  height: 200px;
+}
+
+/* Select files button */
+.select-files-button {
+  padding: 15px 40px; /* Increase padding for a larger button */
+  color: #000; /* Set text color to black */
+  border: 2px solid #000; /* Add border to match the text color */
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px; /* Increase space between elements */
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ------ Right side (Upload Form Section) ------ */
+.upload-form {
+  flex: 0 0 45%; /* Take up 45% of the available space */
+  padding: 20px; /* Add padding for spacing */
+  width: 100%;
+  min-width: 450px;
+}
+
+/* Style for description and text box pairs */
+.input-section {
+  margin-bottom: 20px; /* Add space between each input section */
+}
+
+.input-section label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add space between label and input */
+  color: white;
+}
+
+/* Text input fields */
+.input-section input[type="text"],
+.input-section input[type="number"],
+.input-section input[type="datetime-local"],
+.input-section input[type="checkbox"] {
+  display: block;
+  margin-bottom: 10px;
+  width: calc(100% - 10px); /* Make the text boxes longer */
+  padding: 10px;
+  background-color: #7A8CA8; /* B8D1F5 with 100% transparency */
+  border: none;
+  border-radius: 15px;
+  color: #000; /* Set text color to black */
+}
+
+.input-section input[type="text"]:focus
+ .input-section input[type="number"]:focus,
+ .input-section input[type="datetime-local"]:focus,
+ .input-section input[type="checkbox"]:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on focus */
+}
+
+/* Container for descriptions */
+.input-section-inline {
+  display: flex;
+  gap: 20px; /* Add space between the two input sections */
+  width: 100%;
+}
+.input-section-inline .input-section {
+  flex: 1; /* Make each inline input section take up equal space */
+}
+
+/* CHECKBOXES */
+.input-section input[type="checkbox"] {
+  display: inline-block; /* Change display type to inline-block */
+  margin-right: 10px; /* Add space between checkbox and label */
+  width: auto; /* Adjust width for inline display */
+  transform: scale(1.2); /* Make checkboxes bigger */
+}
+
+.input-section.inline input[type="checkbox"] {
+  margin: 0; /* Remove default margin */
+  margin-left: 10px; /* Add space between label and checkbox */
+  width: auto; /* Adjust width for inline display */
+}
+
+.input-section label {
+  display: inline-block; /* Change display type to inline-block */
+  margin-bottom: 5px; /* Add space between label and input */
+  color: white;
+}
+
+.input-section label[for] {
+  vertical-align: middle; /* Align label vertically with checkbox */
+}
+
+/* Button styles */
+
+.input-section button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #7A8CA8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* Make the edges round */
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+.select-files-button {
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px; /* Add space between elements */
+}
+

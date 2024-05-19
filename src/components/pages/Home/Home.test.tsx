@@ -9,9 +9,14 @@ const wrapWithMemoryRouter = (
   </MemoryRouter>
 );
 
+// Describe the test case
 describe("Home", () => {
-  it("should display the movies", async () => {
+  it("should display the HTML content", async () => {
     renderWithQueryClientProvider(wrapWithMemoryRouter);
-    screen.getByText(/Placeholder Read Me/);
+    screen.getByText(/Send us your/);
+    screen.getByText(/Satellite Streak/);
+    screen.getByText(/Learn more/);
+    screen.getByText(/View Gallery/);
+    // Add assertions for other elements if needed
   });
 });
