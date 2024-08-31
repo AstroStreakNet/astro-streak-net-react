@@ -1,0 +1,9 @@
+// src/components/common/ErrorMessage/ErrorMessage.css
+.error-message {
+  background-color: #fff5f5;
+  border: 1px solid #ffa8a8;
+  border-radius: 4px;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  color: #ff6b6b;
+}

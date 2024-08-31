@@ -1,25 +1,28 @@
-import { QueryClient, QueryClientProvider } from "react-query";
-import ReactDOM from "react-dom/client";
+// src/index.tsx
+import { QueryClient, QueryClientProvider } from 'react-query';
+import App from './App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ReactQueryDevtools } from 'react-query/devtools';
 
-import "src/styles/globals.css";
-import AppRouter from "src/router/AppRouter";
 
+
+// Initialize React Query client
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
       retry: 1,
-      cacheTime: 0,
     },
   },
 });
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
-
-root.render(
-  <QueryClientProvider client={queryClient}>
-    <AppRouter />
-  </QueryClientProvider>
+ReactDOM.render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <App />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
