@@ -7,7 +7,7 @@ const GalleryHeader: React.FC = () => {
       <h1 className="gallery-title">Gallery Search</h1>
       <div className="search-container">
         <input type="text" className="search-bar" placeholder="Search" />
-        <img src="/src/assets/icons/search-icon.png" alt="Search Icon" className="search-icon" />
+        <img src="/public/assets/icons/search-icon.png" alt="Search Icon" className="search-icon" />
       </div>
     </div>
   );

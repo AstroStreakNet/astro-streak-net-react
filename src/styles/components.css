@@ -1,0 +1,91 @@
+.button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--font-size-md);
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.button-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.input-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.input-group input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  font-size: var(--font-size-md);
+}
+
+.error-message {
+  color: #ff6b6b;
+  background-color: #fff5f5;
+  border: 1px solid #ffa8a8;
+  border-radius: 4px;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  width: 100%;
+}
+
+.navbar img {
+  height: 30px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: var(--spacing-lg);
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.account-bubble {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
