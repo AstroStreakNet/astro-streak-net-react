@@ -1,6 +1,6 @@
 // src/components/common/Modal/Modal.tsx
-import React from 'react';
-import './Modal.css';
+import React from "react";
+import "./Modal.css";
 
 interface ModalProps {
   isOpen: boolean;
@@ -14,14 +14,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal" onClick={e => e.stopPropagation()}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>{title}</h2>
-          <button onClick={onClose} className="modal-close">&times;</button>
+          <button onClick={onClose} className="modal-close">
+            &times;
+          </button>
         </div>
-        <div className="modal-content">
-          {children}
-        </div>
+        <div className="modal-content">{children}</div>
       </div>
     </div>
   );

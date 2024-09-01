@@ -16,15 +16,15 @@ export const USERNAME_REQUIREMENTS = {
 
 export const IMAGE_UPLOAD = {
   MAX_FILE_SIZE: 5 * 1024 * 1024, // 5MB
-  ALLOWED_TYPES: ['image/jpeg', 'image/png', 'image/gif'],
+  ALLOWED_TYPES: ["image/jpeg", "image/png", "image/gif"],
   MAX_DIMENSION: 4096, // pixels
 };
 
 export const ERROR_MESSAGES = {
-  REQUIRED_FIELD: 'This field is required',
-  INVALID_EMAIL: 'Please enter a valid email address',
-  INVALID_PASSWORD: 'Password does not meet the requirements',
-  INVALID_USERNAME: 'Username must be between 3 and 20 characters',
-  FILE_TOO_LARGE: 'File size exceeds the maximum limit',
-  INVALID_FILE_TYPE: 'Invalid file type',
+  REQUIRED_FIELD: "This field is required",
+  INVALID_EMAIL: "Please enter a valid email address",
+  INVALID_PASSWORD: "Password does not meet the requirements",
+  INVALID_USERNAME: "Username must be between 3 and 20 characters",
+  FILE_TOO_LARGE: "File size exceeds the maximum limit",
+  INVALID_FILE_TYPE: "Invalid file type",
 };

@@ -1,35 +1,35 @@
 // src/components/features/Upload/UploadForm.tsx
-import React, { useState } from 'react';
-import Button from '../../common/Button/Button';
-import Input from '../../common/Input/Input';
+import React, { useState } from "react";
+import Button from "../../common/Button/Button";
+import Input from "../../common/Input/Input";
 
 const UploadForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    observatory: '',
-    ra: '',
-    dec: '',
-    jd: '',
-    ed: '',
+    name: "",
+    observatory: "",
+    ra: "",
+    dec: "",
+    jd: "",
+    ed: "",
     isFits: false,
     streakType: {
       cr: false,
       rso: false,
       neo: false,
       da: false,
-      other: false
+      other: false,
     },
     permissions: {
       ml: false,
-      publish: false
-    }
+      publish: false,
+    },
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 

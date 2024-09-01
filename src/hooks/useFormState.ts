@@ -1,12 +1,14 @@
 // src/hooks/useFormState.ts
-import { ChangeEvent , useState} from 'react';
+import { ChangeEvent, useState } from "react";
 
 type FormState<T> = {
   values: T;
   errors: Partial<Record<keyof T, string>>;
 };
 
-export const useFormState = <T extends Record<string, any>>(initialState: T) => {
+export const useFormState = <T extends Record<string, any>>(
+  initialState: T
+) => {
   const [formState, setFormState] = useState<FormState<T>>({
     values: initialState,
     errors: {},
@@ -18,7 +20,7 @@ export const useFormState = <T extends Record<string, any>>(initialState: T) => 
       ...prev,
       values: {
         ...prev.values,
-        [name]: type === 'checkbox' ? checked : value,
+        [name]: type === "checkbox" ? checked : value,
       },
     }));
   };

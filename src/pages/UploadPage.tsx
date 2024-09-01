@@ -1,8 +1,7 @@
 // src/pages/UploadPage.tsx
-import DragAndDrop from '../components/features/Upload/DragAndDrop';
-import React from 'react';
-import UploadForm from '../components/features/Upload/UploadForm';
-
+import DragAndDrop from "../components/features/Upload/DragAndDrop";
+import React from "react";
+import UploadForm from "../components/features/Upload/UploadForm";
 
 const UploadPage: React.FC = () => {
   return (

@@ -1,15 +1,16 @@
 // src/services/api/client.ts
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://api.example.com';
+const BASE_URL =
+  process.env.REACT_APP_API_BASE_URL || "https://api.example.com";
 
 class ApiClient {
   private getHeaders(): HeadersInit {
     const headers: HeadersInit = {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     };
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem("authToken");
     if (token) {
-      headers['Authorization'] = `Bearer ${token}`;
+      headers["Authorization"] = `Bearer ${token}`;
     }
     return headers;
   }
@@ -17,14 +18,14 @@ class ApiClient {
   private async handleResponse(response: Response) {
     if (!response.ok) {
       const error = await response.json();
-      throw new Error(error.message || 'An error occurred');
+      throw new Error(error.message || "An error occurred");
     }
     return response.json();
   }
 
   public async get<T>(url: string): Promise<T> {
     const response = await fetch(`${BASE_URL}${url}`, {
-      method: 'GET',
+      method: "GET",
       headers: this.getHeaders(),
     });
     return this.handleResponse(response);
@@ -32,7 +33,7 @@ class ApiClient {
 
   public async post<T>(url: string, data: any): Promise<T> {
     const response = await fetch(`${BASE_URL}${url}`, {
-      method: 'POST',
+      method: "POST",
       headers: this.getHeaders(),
       body: JSON.stringify(data),
     });
@@ -41,7 +42,7 @@ class ApiClient {
 
   public async put<T>(url: string, data: any): Promise<T> {
     const response = await fetch(`${BASE_URL}${url}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: this.getHeaders(),
       body: JSON.stringify(data),
     });
@@ -50,7 +51,7 @@ class ApiClient {
 
   public async delete<T>(url: string): Promise<T> {
     const response = await fetch(`${BASE_URL}${url}`, {
-      method: 'DELETE',
+      method: "DELETE",
       headers: this.getHeaders(),
     });
     return this.handleResponse(response);

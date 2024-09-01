@@ -1,15 +1,21 @@
 // src/components/common/Button/Button.tsx
-import React from 'react';
+import React from "react";
 
 interface ButtonProps {
-  variant: 'primary' | 'secondary';
+  variant: "primary" | "secondary";
   children: React.ReactNode;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
 }
 
-const Button: React.FC<ButtonProps> = ({ variant, children, onClick, disabled = false, type = 'button' }) => {
+const Button: React.FC<ButtonProps> = ({
+  variant,
+  children,
+  onClick,
+  disabled = false,
+  type = "button",
+}) => {
   return (
     <button
       className={`button button-${variant}`}

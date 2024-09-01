@@ -1,19 +1,19 @@
-import './styles/index.css';
+import "./styles/index.css";
 
-import { AuthProvider, UIProvider } from './context';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ROUTES } from './constants';
+import { AuthProvider, UIProvider } from "./context";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ROUTES } from "./constants";
 
-import Footer from './components/layout/Footer/Footer';
-import GalleryPage from './pages/GalleryPage';
-import HomePage from './pages/HomePage';
-import ImageInfoPage from './pages/ImageInfoPage';
-import LoginPage from './pages/LoginPage';
-import NavBar from './components/layout/NavBar/NavBar';
-import NotFoundPage from './pages/NotFoundPage';
-import React from 'react';
-import RegisterPage from './pages/RegisterPage';
-import UploadPage from './pages/UploadPage';
+import Footer from "./components/layout/Footer/Footer";
+import GalleryPage from "./pages/GalleryPage";
+import HomePage from "./pages/HomePage";
+import ImageInfoPage from "./pages/ImageInfoPage";
+import LoginPage from "./pages/LoginPage";
+import NavBar from "./components/layout/NavBar/NavBar";
+import NotFoundPage from "./pages/NotFoundPage";
+import React from "react";
+import RegisterPage from "./pages/RegisterPage";
+import UploadPage from "./pages/UploadPage";
 
 const App: React.FC = () => {
   return (
@@ -26,7 +26,10 @@ const App: React.FC = () => {
               <Routes>
                 <Route path={ROUTES.HOME} element={<HomePage />} />
                 <Route path={ROUTES.GALLERY} element={<GalleryPage />} />
-                <Route path={ROUTES.IMAGE_DETAILS} element={<ImageInfoPage />} />
+                <Route
+                  path={ROUTES.IMAGE_DETAILS}
+                  element={<ImageInfoPage />}
+                />
                 <Route path={ROUTES.UPLOAD} element={<UploadPage />} />
                 <Route path={ROUTES.LOGIN} element={<LoginPage />} />
                 <Route path={ROUTES.REGISTER} element={<RegisterPage />} />

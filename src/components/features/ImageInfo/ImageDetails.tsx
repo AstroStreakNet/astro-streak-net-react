@@ -1,6 +1,6 @@
 // src/components/features/ImageInfo/ImageDetails.tsx
-import { Image } from '../../../types/image';
-import React from 'react';
+import { Image } from "../../../types/image";
+import React from "react";
 
 interface ImageDetailsProps {
   image: Image;
@@ -16,7 +16,9 @@ const ImageDetails: React.FC<ImageDetailsProps> = ({ image }) => {
         <p>Upload Date: {new Date(image.uploadDate).toLocaleDateString()}</p>
         <div className="image-tags">
           {image.tags.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
+            <span key={index} className="tag">
+              {tag}
+            </span>
           ))}
         </div>
       </div>

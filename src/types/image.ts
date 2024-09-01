@@ -1,6 +1,6 @@
 // src/types/image.ts
 
-export type ImageTag = 'HAS_SUN' | 'HAS_ASTEROID' | 'HAS_STAR';
+export type ImageTag = "HAS_SUN" | "HAS_ASTEROID" | "HAS_STAR";
 
 export interface Image {
   id: string;

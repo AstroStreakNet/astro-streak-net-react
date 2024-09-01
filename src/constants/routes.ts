@@ -1,14 +1,14 @@
 // src/constants/routes.ts
 
 export const ROUTES = {
-  HOME: '/',
-  GALLERY: '/gallery',
-  IMAGE_DETAILS: '/image/:id',
-  UPLOAD: '/upload',
-  LOGIN: '/login',
-  REGISTER: '/register',
-  PROFILE: '/profile',
-  NOT_FOUND: '*',
+  HOME: "/",
+  GALLERY: "/gallery",
+  IMAGE_DETAILS: "/image/:id",
+  UPLOAD: "/upload",
+  LOGIN: "/login",
+  REGISTER: "/register",
+  PROFILE: "/profile",
+  NOT_FOUND: "*",
 };
 
 export const generatePath = (route: string, params: Record<string, string>) => {

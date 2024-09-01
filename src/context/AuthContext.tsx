@@ -1,7 +1,7 @@
 // src/context/AuthContext.tsx
-import { fetchUserProfile, login } from '../services/api/userApi';
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User } from '../types';
+import { fetchUserProfile, login } from "../services/api/userApi";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { User } from "../types";
 
 interface AuthContextType {
   user: User | null;
@@ -13,7 +13,9 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -24,7 +26,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const currentUser = await fetchUserProfile();
         setUser(currentUser);
       } catch (err) {
-        console.error('Failed to get current user:', err);
+        console.error("Failed to get current user:", err);
       } finally {
         setIsLoading(false);
       }
@@ -39,7 +41,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const user = await login({ email, password });
       setUser(user);
     } catch (err) {
-      setError('Failed to login. Please check your credentials.');
+      setError("Failed to login. Please check your credentials.");
       throw err;
     } finally {
       setIsLoading(false);
@@ -53,7 +55,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       // Implement logout logic here
       setUser(null);
     } catch (err) {
-      setError('Failed to logout.');
+      setError("Failed to logout.");
       throw err;
     } finally {
       setIsLoading(false);
@@ -74,7 +76,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };

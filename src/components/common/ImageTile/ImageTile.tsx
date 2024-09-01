@@ -1,6 +1,6 @@
 // src/components/common/ImageTile/ImageTile.tsx
-import { Image } from '../../../types/image';
-import React from 'react';
+import { Image } from "../../../types/image";
+import React from "react";
 
 interface ImageTileProps {
   image: Image;

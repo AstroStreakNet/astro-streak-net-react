@@ -1,8 +1,8 @@
 // src/components/common/Input/Input.tsx
-import React from 'react';
+import React from "react";
 
 interface InputProps {
-  type: 'text' | 'number' | 'email' | 'password' | 'date';
+  type: "text" | "number" | "email" | "password" | "date";
   label: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -20,11 +20,14 @@ const Input: React.FC<InputProps> = ({
   name,
   placeholder,
   required = false,
-  error
+  error,
 }) => {
   return (
     <div className="input-group">
-      <label htmlFor={name}>{label}{required && <span className="required">*</span>}</label>
+      <label htmlFor={name}>
+        {label}
+        {required && <span className="required">*</span>}
+      </label>
       <input
         type={type}
         id={name}

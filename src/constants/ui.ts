@@ -14,28 +14,28 @@ export const Z_INDEX = {
 };
 
 export const COLORS = {
-  PRIMARY: '#1C2533',
-  SECONDARY: '#E0E8F4',
-  ACCENT: '#7A8CA8',
-  ERROR: '#ff6b6b',
-  SUCCESS: '#51cf66',
-  WARNING: '#fcc419',
+  PRIMARY: "#1C2533",
+  SECONDARY: "#E0E8F4",
+  ACCENT: "#7A8CA8",
+  ERROR: "#ff6b6b",
+  SUCCESS: "#51cf66",
+  WARNING: "#fcc419",
 };
 
 export const FONT_SIZES = {
-  XS: '12px',
-  SM: '14px',
-  MD: '16px',
-  LG: '18px',
-  XL: '24px',
-  XXL: '32px',
+  XS: "12px",
+  SM: "14px",
+  MD: "16px",
+  LG: "18px",
+  XL: "24px",
+  XXL: "32px",
 };
 
 export const SPACING = {
-  XS: '4px',
-  SM: '8px',
-  MD: '16px',
-  LG: '24px',
-  XL: '32px',
-  XXL: '48px',
+  XS: "4px",
+  SM: "8px",
+  MD: "16px",
+  LG: "24px",
+  XL: "32px",
+  XXL: "48px",
 };

@@ -1,5 +1,5 @@
 // src/pages/RegisterPage.tsx
-import React from 'react';
+import React from "react";
 
 const RegisterPage: React.FC = () => {
   return (
