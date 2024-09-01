@@ -1,0 +1,25 @@
+// src/components/common/Input/Input.css
+.input-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-color);
+}
+
+.input-group input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  font-size: var(--font-size-md);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.input-group .required {
+  color: #ff6b6b;
+  margin-left: var(--spacing-xs);
+}

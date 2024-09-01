@@ -1,0 +1,233 @@
+/* Homepage styles */
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background-image: url('/public/assets/images/spacePic.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Push the background image behind other elements */
+}
+
+.content {
+  text-align: center;
+  color: var(--text-color);
+  z-index: 1;
+}
+
+.content h1 {
+  font-size: min(8vw, 80px);
+  font-weight: lighter;
+  margin-bottom: var(--spacing-xl);
+}
+
+.learn-more-btn {
+  display: inline-block;
+  font-size: min(2vw, 18px);
+  padding: min(2vw, 15px) min(4vw, 30px);
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Home-Line {
+  width: 95%;
+  height: 1px;
+  background-color: var(--text-color);
+  margin: var(--spacing-xl) auto;
+}
+
+.gallery-link {
+  display: block;
+  color: var(--text-color);
+  font-size: min(7vw, 35px);
+  text-decoration: none;
+  margin-top: var(--spacing-lg);
+}
+
+/* Gallery styles */
+.image-container {
+  background-color: #2d3748;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-xl);
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.author-details {
+  display: flex;
+  align-items: center;
+}
+
+.author-name {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.image-description {
+  color: var(--text-color);
+}
+
+.gallery-page {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.gallery-header {
+  max-width: 550px;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  margin: auto;
+}
+
+.gallery-title {
+  color: var(--text-color);
+  font-size: min(7vw, 50px);
+  margin-bottom: var(--spacing-xl);
+  display: block;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.search-bar {
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--secondary-color);
+  border-radius: 25px;
+  font-size: var(--font-size-md);
+}
+
+.search-icon {
+  position: absolute;
+  right: var(--spacing-md);
+  width: 25px;
+  height: 25px;
+}
+
+.Gallery-Line {
+  top: 90px;
+  width: 95%;
+  height: 1px;
+  background-color: var(--secondary-color);
+  display: inline-block;
+}
+
+/* Upload page styles */
+.Upload-page {
+  width: 100%;
+  padding: 0 var(--spacing-lg);
+}
+
+.Upload-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondary-color);
+  display: inline-block;
+}
+
+.upload-title {
+  color: var(--text-color);
+  font-size: min(7vw, 40px);
+  margin-bottom: var(--spacing-xl);
+}
+
+.upload-container {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  min-width: 1000px;
+  margin: 0 auto;
+  gap: var(--spacing-xl);
+  justify-content: center;
+}
+
+.upload-drag-drop {
+  flex: 0 0 45%;
+  background-color: rgba(184, 209, 245, 0.6);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.drag-drop-area {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drag-drop-text {
+  margin-top: var(--spacing-md);
+}
+
+.drag-file-image {
+  width: 220px;
+  height: 200px;
+}
+
+.select-files-button {
+  padding: var(--spacing-md) var(--spacing-xl);
+  color: #000;
+  border: 2px solid #000;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: var(--spacing-lg);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.upload-form {
+  flex: 0 0 45%;
+  padding: var(--spacing-lg);
+  width: 100%;
+  min-width: 450px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .upload-container {
+    flex-direction: column;
+    min-width: auto;
+  }
+
+  .upload-drag-drop,
+  .upload-form {
+    flex: 0 0 100%;
+    min-width: auto;
+  }
+}

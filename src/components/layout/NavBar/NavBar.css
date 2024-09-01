@@ -1,0 +1,47 @@
+/* Navbar styles */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  width: 100%;
+}
+
+.navbar-logo-image {
+  height: 30px;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-item {
+  margin-right: var(--spacing-lg);
+}
+
+.navbar-item:last-child {
+  margin-right: 0;
+}
+
+.navbar-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.account-bubble {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
