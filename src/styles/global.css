@@ -1,31 +1,54 @@
-@import 'variables.css';
-
-html, body {
-  width: 100vw;
-  height: 100vh;
-  min-width: 350px;
-  overflow-y: overlay;
+body {
   font-family: var(--font-family);
   font-size: var(--font-size-md);
   color: var(--text-color);
   background-color: var(--background-color);
+  line-height: 1.5;
 }
 
-h1, h2, h3, p {
-  color: var(--text-color);
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-md);
 }
 
 h1 { font-size: var(--font-size-xl); }
 h2 { font-size: var(--font-size-lg); }
 
-main {
-  @apply flex flex-col items-center w-full h-full;
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
 }
 
-h2 {
-  @apply p-5;
+a:hover {
+  color: var(--secondary-color);
 }
 
-p {
-  @apply p-1;
+button {
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed) ease;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+input, textarea, select {
+  font-size: var(--font-size-md);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
 }

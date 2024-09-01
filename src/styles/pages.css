@@ -14,25 +14,24 @@
   background-image: url('/public/assets/images/spacePic.png');
   background-size: cover;
   background-position: center;
+  z-index: -1; /* Push the background image behind other elements */
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: var(--text-color);
+  z-index: 1;
 }
 
 .content h1 {
-  font-size: min(6vw, 70px);
+  font-size: min(8vw, 80px);
   font-weight: lighter;
+  margin-bottom: var(--spacing-xl);
 }
 
 .learn-more-btn {
   display: inline-block;
-  font-size: min(2vw, 15px);
+  font-size: min(2vw, 18px);
   padding: min(2vw, 15px) min(4vw, 30px);
   background-color: transparent;
   color: var(--text-color);
@@ -40,7 +39,6 @@
   text-decoration: none;
   border-radius: 25px;
   transition: background-color 0.3s, color 0.3s;
-  margin-top: 4vh;
 }
 
 .learn-more-btn:hover {
@@ -48,22 +46,18 @@
 }
 
 .Home-Line {
-  position: absolute;
-  top: calc(53vh + 20px);
-  left: 50%;
-  transform: translateX(-50%);
   width: 95%;
   height: 1px;
   background-color: var(--text-color);
+  margin: var(--spacing-xl) auto;
 }
 
 .gallery-link {
-  position: absolute;
-  top: calc(53vh + 40px);
-  transform: translateX(50%);
+  display: block;
   color: var(--text-color);
   font-size: min(7vw, 35px);
   text-decoration: none;
+  margin-top: var(--spacing-lg);
 }
 
 /* Gallery styles */

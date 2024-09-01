@@ -20,6 +20,7 @@
     "deploy": "cdk deploy --app 'cdk.out/' --require-approval never"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.12.1",
     "axios": "^1.7.6",
     "env-cmd": "^10.1.0",
     "react": "^18.2.0",
